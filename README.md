@@ -33,7 +33,9 @@
 
 В JavaScript, размер числа типа number равен 8 байтам в 64-битных системах и 4 байтам в 32-битных системах. Но задача не привязана к конкретному языку программирования, поэтому для представления чисел от 1 до 255 достаточно 1 байта, с 255 до 300 - 2 байта. Каждый ASCII символ занимает 1 байт.
 Таким образом в моём решении коэффициент сжатия высчитывается по следующей формуле:
-	uncompressedSize = arr.length * 2; 
-	compressedSize = serializedArr.length;
-	compressionRatio = 1 - compressedSize / uncompressedSize;
+
+	`uncompressedSize = arr.length * 2;`
+	`compressedSize = serializedArr.length;`
+	`compressionRatio = 1 - compressedSize / uncompressedSize;`
+
 где зависит от изначального массива и в среднем составляет 50%.
